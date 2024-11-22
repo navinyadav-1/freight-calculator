@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freight Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('urban-road-background_1137-318.avif'); /* Add the image URL here */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.6); /* Transparent background to make form pop */
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"], input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input[type="number"], input[type="text"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Freight Calculator</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="distance">Distance (in km)</label>
+                    <input type="number" id="distance" name="distance" required placeholder="Enter Distance">
+                </div>
+                <div class="form-group">
+                    <label for="toll">Toll Cost</label>
+                    <input type="number" id="toll" name="toll" required placeholder="Enter Toll Cost">
+                </div>
+                <div class="form-group">
+                    <label for="mileage">Mileage of the Vehicle (km/Ltr)</label>
+                    <input type="number" id="mileage" name="mileage" required placeholder="Enter Mileage">
+                </div>
+                <div class="form-group">
+                    <label for="fuelCost">Fuel Cost (Rs/Ltr)</label>
+                    <input type="number" id="fuelCost" name="fuelCost" required placeholder="Enter Fuel Cost">
+                </div>
+                <div class="form-group">
+                    <label for="driverCost">Driver Cost Per Kilometer</label>
+                    <input type="number" id="driverCost" name="driverCost" required placeholder="Enter Driver Cost">
+                </div>
+                <div class="form-group">
+                    <label for="truckCost">Truck Cost Per Kilometer</label>
+                    <input type="number" id="truckCost" name="truckCost" required placeholder="Enter Truck Cost">
+                </div>
+                <div class="form-group">
+                    <label for="capacity">Truck Capacity (kg)</label>
+                    <input type="number" id="capacity" name="capacity" required placeholder="Enter Truck Capacity">
+                </div>
+                <div class="form-group">
+                    <label for="profitFactor">Profit Factor (%)</label>
+                    <input type="number" id="profitFactor" name="profitFactor" placeholder="Enter Profit Factor">
+                </div>                
+                <div class="form-group">
+                    <input type="submit" value="Calculate Cost">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app1.js"></script>
+</body>
+</html>
